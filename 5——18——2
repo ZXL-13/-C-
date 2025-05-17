@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    float float_1 = 11.27;
+    float float_2 = 11.12345678910;
+    printf("float_1: %f （float类型默认输出6位小数）\n", float_1);
+    printf("float_2: %f （受float类型精度限制，可能存在舍入误差）\n", float_2);
+    double double_1 = 11.12345678910;
+    printf("float_2: %.10f （float类型精度有限，难以准确显示10位小数）\n", float_2);
+    printf("double_1: %.10lf （double类型可准确显示较高精度）\n", double_1);
+    return 0;
+}
+
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+    const float PI = 3.1415;
+    float s;
+    s = PI * pow(2,2);
+    printf("半径为2的圆的面积是:%.2f\n", s);
+    s = PI * pow(8,2);
+    printf("半径为8的圆的面积是:%.2f\n", s);
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a = 1;
+    int b = 9;
+    int c = 20;
+    double delta = pow(b, 2) - 4 * a * c;
+    if (delta >= 0) {
+        double x_1 = (-b + sqrt(delta)) / (2 * a);
+        double x_2 = (-b - sqrt(delta)) / (2 * a);
+        printf("该一元二次方程式的根为: %lf, %lf\n", x_1, x_2);
+    } else {
+        printf("该一元二次方程在实数范围内无实数根\n");
+    }
+    return 0;
+}
