@@ -7,11 +7,11 @@ int main()
 	if(a>b)
 	{
 		result=a-b;
-		printf("a与b的差值为%d",result);
+		printf("a涓巄宸�间负%d",result);
 	}
 else
 	{
 	result=b-a;
-	printf("a与b的差值为%d",result);
+	printf("a涓巄宸�间负%d",result);
 }
 }
